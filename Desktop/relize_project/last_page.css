@@ -1,0 +1,169 @@
+body {
+    background-color: #c0c0c0;
+    font-family: Georgia, serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .container {
+    background-color: #f0f0f0;
+    width: 85%;
+    max-width: 950px;
+    padding: 40px 50px;
+  }
+
+  .contant {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-width: 180px;
+  }
+
+  .follow-title {
+    font-family: Impact, "Arial Black", sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    color: #8B4513;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .social-icons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .social-icons .icon {
+    width: 52px;
+    height: 52px;
+    background-color: #d2d2d2;
+    border-radius: 3px;
+  }
+
+  .divider {
+    width: 1px;
+    background-color: #ccc;
+    align-self: stretch;
+  }
+
+  .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .email-label {
+    font-family: Georgia, serif;
+    font-size: 1.05rem;
+    font-weight: bold;
+    color: #8B4513;
+    text-align: center;
+  }
+
+  .email-input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1.5px solid #aaa;
+    background-color: #ffffff;
+    font-size: 1rem;
+    border-radius: 2px;
+    outline: none;
+    font-family: Georgia, serif;
+  }
+
+  .email-input:focus {
+    border-color: #8B4513;
+  }
+
+  .send-btn {
+    width: 100%;
+    padding: 16px;
+    background-color: #8B4513;
+    color: #ffffff;
+    border: none;
+    font-family: Impact, "Arial Black", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.2s ease;
+  }
+
+  .send-btn:hover {
+    background-color: #6b3410;
+  }
+
+  .email-message {
+    margin-top: 8px;
+    font-size: 0.95rem;
+  }
+
+  .order-entry-button {
+    display: inline-block;
+    margin: 18px auto 0;
+    padding: 12px 32px;
+    background: transparent;
+    border-radius: 999px;
+    border: 2px dashed #8B4513;
+    color: #8B4513;
+    font-family: Impact, "Arial Black", sans-serif;
+    font-size: 0.96rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, border-style 0.2s ease;
+  }
+
+  .order-entry-button:hover {
+    background-color: rgba(139, 69, 19, 0.07);
+    color: #5d3010;
+    border-style: solid;
+  }
+
+  .recent-orders {
+    margin-top: 22px;
+    padding-top: 16px;
+    border-top: 1px solid #d0d0d0;
+  }
+
+  .recent-title {
+    font-family: Georgia, serif;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+  }
+
+  .recent-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 4px;
+    font-size: 0.95rem;
+  }
+
+  .recent-list li {
+    padding: 4px 0;
+    border-bottom: 1px dashed #dcdcdc;
+  }
+
+  .recent-list li span {
+    display: inline-block;
+  }
+
+  .recent-empty {
+    font-size: 0.9rem;
+    color: #777;
+  }

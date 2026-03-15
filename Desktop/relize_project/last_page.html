@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+    <title>Live Drink</title>
+    <link rel="stylesheet" href="last_page.css">
+</head>
+<body>
+
+    <div class="container">
+      <div class="contant">
+
+        <div class="left">
+          <span class="follow-title">Follow Us</span>
+          <div class="social-icons">
+            <div class="icon"></div>
+            <div class="icon"></div>
+            <div class="icon"></div>
+          </div>
+        </div>
+            <div class="divider"></div>
+            <div class="right">
+          <span class="email-label">Enter your EMAIL here*</span>
+          <input class="email-input" id="email-input" type="text" placeholder="email">
+          <button class="send-btn" onclick="handleEmailSubmit()">Send it</button>
+          <div class="email-message" id="email-message"></div>
+
+          <div class="recent-orders">
+            <div class="recent-title">Your recent orders</div>
+            <ul class="recent-list" id="recent-orders-list"></ul>
+            <div class="recent-empty" id="recent-orders-empty">You have no orders yet.</div>
+          </div>
+        </div>
+    
+      </div>
+    </div>
+    <script src="app.js"></script>
+    </body>
+    </html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<head>
+    <title>Live Drink</title>
+    <link rel="stylesheet" href="main_page.css">
+</head>
+<body>
+    <div class="container">
+    <div class="contant">
+        <div class="imge">
+            <img src="fotos/livedrink.png">
+        </div>
+
+        <div class="imge">
+            <img src="fotos/bottles.png">
+        </div>
+
+        <h3>Welcome to Live Drink</h3>
+        <p>Discover a world of refreshing beverages at your fingertips. Whether you're looking for a classic drink or something new and exciting, Live Drink has got you covered. Explore our extensive menu, find recipes, and enjoy every sip!</p>
+
+        <div class="quiz" id="drink-quiz">
+            <h2>Find your perfect Live Drink</h2>
+            <p class="quiz-intro">
+                Move the sliders and we will suggest a drink for you.
+            </p>
+
+            <div class="quiz-row">
+                <label for="pref-sweet">How sweet do you like your drinks?</label><br>
+                <input type="range" id="pref-sweet" min="1" max="5" value="3">
+            </div>
+
+            <div class="quiz-row">
+                <label for="pref-fresh">How fresh and light should it feel?</label><br>
+                <input type="range" id="pref-fresh" min="1" max="5" value="4">
+            </div>
+
+            <div class="quiz-row">
+                <label for="pref-fun">How adventurous are you today?</label><br>
+                <input type="range" id="pref-fun" min="1" max="5" value="3">
+            </div>
+
+            <button id="mix-button">Mix my drink!</button>
+
+            <div class="quiz-result" id="mix-result" style="display: none;">
+                <h3 id="result-title"></h3>
+                <p id="result-text"></p>
+                <a id="result-link" href="page_1.html">Open this drink page</a>
+            </div>
+
+            <p class="quiz-last" id="last-mix"></p>
+        </div>
+
+        <button
+            class="order-entry-button"
+            data-order-drink="any"
+            data-order-name="Live Drink – surprise pack"
+        >
+            I want to order Live Drink
+        </button>
+
+        <div class="order-overlay" id="order-overlay"></div>
+        <div class="order-modal" id="order-modal">
+            <button class="order-close" id="order-close">&times;</button>
+            <h2 id="order-drink-title">Live Drink</h2>
+            <form id="order-form">
+              <label for="order-name">Your name</label>
+              <input id="order-name" type="text" placeholder="Name">
+
+              <label for="order-email">Email</label>
+              <input id="order-email" type="email" placeholder="Email">
+
+              <label for="order-qty">How many bottles?</label>
+              <input id="order-qty" type="number" min="1" value="1">
+
+              <input type="hidden" id="order-drink-id" value="any">
+
+              <button type="submit" class="order-submit">Create order</button>
+            </form>
+            <p class="order-summary" id="order-summary"></p>
+        </div>
+    </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
