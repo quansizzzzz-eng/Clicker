@@ -11,6 +11,7 @@
     "last_page.html",
   ];
 
+// Функція для навігації між сторінками за допомогою клавіш ← →
   function setupKeyboardNavigation() {
     const index = pageOrder.indexOf(currentPage);
     if (index === -1) return;
@@ -37,6 +38,7 @@
     });
   }
 
+// Функція ініціалізації квізу для підбору напою на основі вподобань користувача
   function setupQuiz() {
     const quizRoot = document.getElementById("drink-quiz");
     if (!quizRoot) return;
@@ -64,6 +66,7 @@
       return;
     }
 
+    
     const drinks = [
       {
         id: "orange",
@@ -99,6 +102,8 @@
       },
     ];
 
+// Функція обчислює найбільш підходящий напій,
+// порівнюючи введені користувачем параметри з характеристиками напоїв
     function calculateBestDrink(preferences) {
       let best = null;
       let bestScore = Infinity;
@@ -162,6 +167,8 @@
         ").";
     }
 
+// Функція обробляє натискання кнопки "Mix",
+// отримує значення з полів, знаходить результат і відображає його   
     function handleMixClick() {
       const preferences = {
         sweet: Number(sweetInput.value),
@@ -188,7 +195,7 @@
       const saved = {
         drinkId: drink.id,
         preferences,
-      };
+      };  
 
       try {
         localStorage.setItem("liveDrinkLastMix", JSON.stringify(saved));
@@ -203,6 +210,8 @@
     showLastMix();
   }
 
+// Функція налаштовує процес оформлення замовлення:
+// відкриття модального вікна, валідацію форми та збереження даних  
   function setupOrderFlow() {
     const orderButtons = document.querySelectorAll("[data-order-drink]");
     const orderModal = document.getElementById("order-modal");
@@ -225,6 +234,8 @@
       return;
     }
 
+// Функція відкриває модальне вікно замовлення
+// та підставляє дані обраного напою    
     function openOrder(drinkId, drinkName) {
       orderDrinkInput.value = drinkId;
       orderTitle.textContent = drinkName || "Live Drink";
@@ -234,6 +245,7 @@
       document.body.style.overflow = "hidden";
     }
 
+// Функція закриває модальне вікно замовлення    
     function closeOrder() {
       orderModal.classList.remove("open");
       orderOverlay.classList.remove("open");
@@ -303,6 +315,8 @@
     });
   }
 
+// Функція ініціалізує форму введення email,
+// перевіряє коректність і зберігає у localStorage  
   function setupEmailForm() {
     const emailInput = document.getElementById("email-input");
     const emailMessage = document.getElementById("email-message");
@@ -317,7 +331,7 @@
       }
     } catch (e) {
     }
-
+    
     function handleEmailSubmit() {
       const value = emailInput.value.trim();
       const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -347,6 +361,8 @@
     window.handleEmailSubmit = handleEmailSubmit;
   }
 
+// Функція відображає останні замовлення користувача,
+// збережені у localStorage  
   function setupRecentOrders() {
     const listEl = document.getElementById("recent-orders-list");
     const emptyEl = document.getElementById("recent-orders-empty");
